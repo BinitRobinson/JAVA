@@ -1,0 +1,67 @@
+package begineerjava;
+import java.util.Scanner;
+import java.util.Random;
+
+
+public class random2 {
+	public static void main(String[] arg) {
+		Scanner sc=new Scanner(System.in);
+		while(true) {
+		String str[]= {"stone","paper","scissors"};
+		String pcmove=str[new Random().nextInt(str.length)];
+		String yourmove;
+		while(true) {
+			System.out.println("Enter your choice (stone,paper,scissors):");
+			yourmove=sc.nextLine();
+			System.out.println("pc move: "+pcmove);
+			if(yourmove.equals("stone")|| yourmove.equals("paper")|| yourmove.equals("scissors")) {
+				break;
+			}
+			System.out.println(yourmove+"is not the valid input");
+		}
+			if(yourmove.equals(pcmove)) {
+				System.out.println("Round tie");
+				}
+			else if(yourmove.equals("stone")) {
+				if(pcmove.equals("paper")) {
+					System.out.println(" You Lose");
+				}
+			}
+			else if(yourmove.equals("stone")) {
+				if(pcmove.equals("paper")) {
+					System.out.println("You Won");
+				}
+			}
+			else if(yourmove.equals("paper")) {
+				if(pcmove.equals("scissors")) {
+					System.out.println("You Lose");
+				}
+			}
+			else if(yourmove.equals("paper")) {
+				if(pcmove.equals("stone")) {
+					System.out.println(" You Won");
+				}
+			}
+			else if(yourmove.equals("scissors")) {
+				if(pcmove.equals("paper")) {
+					System.out.println(" You Won");
+				}
+			}
+			else if(yourmove.equals("scissors")) {
+				if(pcmove.equals("stone")) {
+					System.out.println("You Lose");
+				}
+			}
+			System.out.println("Play Again ? (y/n)");
+			String playagain=sc.nextLine();
+			if(!playagain.equals("y")) {
+				break;
+			}
+		}
+	}
+		
+			
+}
+	
+
+
